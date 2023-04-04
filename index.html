@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet PortFolio</title>
+    <link rel="stylesheet" href="css/style.css">
+	
+</head>
+<!--  header start here -->
+<header>
+    <div class="container">
+        <div class="header-wrapper">
+            <div class="logo">
+                <a href="#">keren haddad</a>
+            </div>
+            <div class="navs">
+                <ul>
+                    <li class="list-item"><a href="#">project</a>
+                        <ul class="dropdown ">
+                            <li>Projets : Je souhaiterais intégrer l’entreprise l’Oréal pour un stage, car leurs
+                                stratégie maketing est pour moi leurs atouts majeurs</li>
+                        </ul>
+                    </li>
+                    <li class="list-item">
+                        <a href="#">hobbies</a>
+                        <ul class="dropdown">
+                            <li>Hobbies : Je pratique de la danse, et du yoga, pour me retrouver et me recentrer sur moi
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list-item">
+                        <a href="#">contact</a>
+                        <ul class="dropdown ">
+                            <li>Contact Mail: keren.haddad2204@gmail.com
+                            </li>
+                            <li>
+                                Telephone: 07.81.55.44.90
+                            </li>
+                            <li> Linkedin: Keren Haddad</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="hamburger-icon" onclick="showNavbar()">
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="sidemenu">
+                    <ul>
+                        <li><a href="#">project</a></li>
+                        <li><a href="#">hobbies</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</header>
+<!--  header ends here -->
+<div class="content-wrapper">
+    <div class="container">
+        <div class="line"></div>
+        <div class="portfolio" data-aos="fade-up" data-aos-duration="4000">
+            <h1>P o r t f o l i o</h1>
+        </div>
+        <!--  cards start here -->
+        <div class="cards-wrapper">
+            <div class="card" data-aos="fade-up" data-aos-duration="4000" data-aos-delay="300">
+                <div class="card-img">
+                    <img src="./images/maphoto.png" alt="">
+                </div>
+                <h6>Decouvrir mon univers</h6>
+                <div class="card-bottom">
+                    <a href="./monunivers.html" target="_blank">
+                        <span>Plus d’info</span>
+                        <img src="./images/arrow-right.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="4000" data-aos-delay="400">
+                <div class="card-img">
+                    <img src="./images/meta.png" alt="img here">
+                </div>
+                <h6>Mes projets accomplis </h6>
+                <div class="card-bottom">
+                    <a href="./mesprojets.html" target="_blank">
+                        <span>Plus d’info</span>
+                        <img src="./images/arrow-right.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="4000" data-aos-delay="500">
+                <div class="card-img">
+                    <img src="./images/card3.png" alt="img here">
+                </div>
+                <h6>Mon projet de stage</h6>
+                <div class="card-bottom">
+                    <a href="./monstage.html" target="_blank">
+                        <span>Plus d’info</span>
+                        <img src="./images/arrow-right.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--  cards ends here -->
+        <!--  index page bottom line   -->
+        <div class="line"></div>
+    </div>
+
+</div>
+<!-- aos js animation cdn link here -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- js code start here -->
+<script>
+    AOS.init();
+
+    // for mobile navbar
+    function showNavbar() {
+        var element = document.getElementsByClassName("hamburger-icon")[0];
+        element.classList.toggle("show");
+    }
+
+    // js code to show dropdown in the header
+    const parents = document.querySelectorAll('.list-item');
+    parents.forEach((parent) => {
+        parent.addEventListener('mouseover', (event) => {
+            const target = event.target;
+
+            // find the parent element of the target element
+            const parentElement = target.closest('.list-item');
+
+            // add class to the parent element's children
+            parentElement.querySelectorAll('.dropdown').forEach((child) => {
+                child.classList.add('show');
+            });
+        });
+
+        parent.addEventListener('mouseout', (event) => {
+            const target = event.target;
+
+            // find the parent element of the target element
+            const parentElement = target.closest('.list-item');
+
+            // remove class from the parent element's children
+            parentElement.querySelectorAll('.dropdown').forEach((child) => {
+                child.classList.remove('show');
+            });
+        });
+    });
+</script>
+<!-- js coe ends here -->
+
+</body>
+
+</html>
