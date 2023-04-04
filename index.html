@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 	
 </head>
-<!--  header start here -->
+<!--  header commence -->
 <header>
     <div class="container">
         <div class="header-wrapper">
@@ -21,7 +21,7 @@
                     <li class="list-item"><a href="#">project</a>
                         <ul class="dropdown ">
                             <li>Projets : Je souhaiterais intégrer l’entreprise l’Oréal pour un stage, car leurs
-                                stratégie maketing est pour moi leurs atouts majeurs</li>
+                                stratégie maketing est leurs atouts majeurs</li>
                         </ul>
                     </li>
                     <li class="list-item">
@@ -61,14 +61,14 @@
 
     </div>
 </header>
-<!--  header ends here -->
+<!--  header fin -->
 <div class="content-wrapper">
     <div class="container">
         <div class="line"></div>
         <div class="portfolio" data-aos="fade-up" data-aos-duration="4000">
             <h1>P o r t f o l i o</h1>
         </div>
-        <!--  cards start here -->
+        <!--  cards commence -->
         <div class="cards-wrapper">
             <div class="card" data-aos="fade-up" data-aos-duration="4000" data-aos-delay="300">
                 <div class="card-img">
@@ -107,15 +107,15 @@
                 </div>
             </div>
         </div>
-        <!--  cards ends here -->
+        <!--  cards fin -->
         <!--  index page bottom line   -->
         <div class="line"></div>
     </div>
 
 </div>
-<!-- aos js animation cdn link here -->
+<!-- aos js animation cdn lin ici -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<!-- js code start here -->
+<!-- js code commence -->
 <script>
     AOS.init();
 
@@ -125,16 +125,16 @@
         element.classList.toggle("show");
     }
 
-    // js code to show dropdown in the header
+    // code js pour afficher la liste déroulante dans l'en-tête
     const parents = document.querySelectorAll('.list-item');
     parents.forEach((parent) => {
         parent.addEventListener('mouseover', (event) => {
             const target = event.target;
 
-            // find the parent element of the target element
+            // element parent element cible
             const parentElement = target.closest('.list-item');
 
-            // add class to the parent element's children
+            // ajout une classe aux enfants de l'élément parent
             parentElement.querySelectorAll('.dropdown').forEach((child) => {
                 child.classList.add('show');
             });
@@ -143,17 +143,17 @@
         parent.addEventListener('mouseout', (event) => {
             const target = event.target;
 
-            // find the parent element of the target element
+            // element parent element cible
             const parentElement = target.closest('.list-item');
 
-            // remove class from the parent element's children
+            // suppretion la classe des enfants de l'élément parent
             parentElement.querySelectorAll('.dropdown').forEach((child) => {
                 child.classList.remove('show');
             });
         });
     });
 </script>
-<!-- js coe ends here -->
+<!-- js coe fin -->
 
 </body>
 
